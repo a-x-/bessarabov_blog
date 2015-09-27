@@ -6,5 +6,6 @@ addons:
   apt:
     packages:
     - libaspell-dev
+    - hunspell-ru
 
 install: cpanm --notest Test::Whitespaces Text::Aspell File::Slurp
