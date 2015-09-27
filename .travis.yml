@@ -2,8 +2,9 @@ language: perl
 perl:
   - "5.16"
 
-before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -y libaspell-dev
+addons:
+  apt:
+    packages:
+    - libaspell-dev
 
 install: cpanm --notest Test::Whitespaces Text::Aspell File::Slurp
